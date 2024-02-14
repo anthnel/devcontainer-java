@@ -1,0 +1,10 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    // persisting user profile
+    "mounts": [
+        "source=profile,target=/root,type=volume",
+        "target=/root/.vscode-server,type=volume",
+        "source=devcontainer-zshhistory,target=/commandhistory,type=volume"
+    ],
+    "postCreateCommand": "zsh .devcontainer/post_create.sh"
+}
